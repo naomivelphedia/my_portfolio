@@ -2,12 +2,22 @@
 
 body {
     color: #333333;
+    background-image: url("http://localhost:8080/my_portfolio/muscles-2525200_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: "Hiragino Kaku Gothic Pro",Meiryo,"MS PGothic",Helvetica,Arial,sans-serif;
+
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 #header {
     width: 100%;
-    height: 70px;
+    height: 50px;
     background-color: #333333;
 }
 
@@ -17,17 +27,23 @@ body {
     padding-left: 3%;
 }
 
+div.errors_message {
+    color: #721c24;
+    background-color: #f8d7da;
+    display: inline-block;
+    border-top: solid 5px #ff7d6e;
+}
+
 h1 {
-    width: 94%;
-    padding-top: 17px;
-    padding-left: 3%;
-    font-size: 24px;
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 7px;
     color: #eeeeee;
 }
 
 h2 {
     font-size: 36px;
-    margin-bottom: 15px;
 }
 
 li {
@@ -36,8 +52,21 @@ li {
 }
 
 p {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    color: #d2b48c;
+}
+
+label {
+    color: #d2b48c;
+    font-weight: bold;
+}
+
+select {
+    margin-top: 10px;
+    margin-bottom: 10px
 }
 
 a {
@@ -45,13 +74,34 @@ a {
     color: #24738e;
 }
 
+input {
+    width: 60px;
+}
+
+input.activity_button {
+    width: 50px;
+}
+
 table, tr, th, td {
     border: 1px solid #cccccc;
 }
 
 table {
-    width: 100%;
+    width: 30%;
     table-layout: fixed;
+    float: right;
+}
+
+div.bmi_contents {
+    margin-top: 30px;
+    display: inline-block;
+    float: left;
+}
+
+div.metabo_contents {
+    margin-top: 30px;
+    display: inline-block;
+    float: left;
 }
 
 th {
@@ -71,6 +121,7 @@ button {
 
 #footer {
     text-align: center;
+    margin-top: auto;
 }
 
 #flush_success {
@@ -91,4 +142,167 @@ button {
     margin-bottom: 15px;
     color: #721c24;
     background-color: #f8d7da;
+}
+
+p.body_fat_result {
+    background: white;
+    border-bottom: solid 3px #aac5de;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #777777;
+    font-weight: bold;
+}
+
+p.bmi_result {
+    background: white;
+    border-bottom: solid 3px #aac5de;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #777777;
+    font-weight: bold;
+}
+
+p.bodyType_result {
+    background: white;
+    border-bottom: solid 3px #aac5de;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #777777;
+    font-weight: bold;
+}
+
+p.metabo_result {
+    background: white;
+    border-bottom: solid 3px #aac5de;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #777777;
+    font-weight: bold;
+}
+
+p.carbo_result {
+    background: white;
+    border-bottom: solid 3px #aac5de;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #777777;
+    font-weight: bold;
+}
+
+p.protein_result {
+    background: white;
+    border-bottom: solid 3px #aac5de;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #777777;
+    font-weight: bold;
+}
+
+p.fat_result {
+    background: white;
+    border-bottom: solid 3px #aac5de;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #777777;
+    font-weight: bold;
+}
+
+p.calorie_result {
+    background: white;
+    border-bottom: solid 3px #aac5de;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #777777;
+    font-weight: bold;
+}
+
+th.bmi_num {
+    color: 000000;
+    background-color: #dcdcdc;
+}
+
+th.bmi_state {
+    color: 000000;
+    background-color: #dcdcdc;
+}
+
+td.too_skinny {
+    color: 000000;
+    background-color: #6633CC;
+}
+
+td.skinny {
+    color: 000000;
+    background-color: #9933FF;
+}
+
+td.standard {
+    color: 000000;
+    background-color: #3399FF;
+}
+
+td.light_obesity {
+    color: 000000;
+    background-color: #FFCCCC;
+}
+
+td.middle_obesity {
+    color: 000000;
+    background-color: #CC6666;
+}
+
+td.serious_obesity {
+    color: 000000;
+    background-color: #CC3333;
+}
+
+td.super_obesity {
+    color: 000000;
+    background-color: #990000;
+}
+
+th.gender {
+    color: 000000;
+    background-color: #dcdcdc;
+}
+
+th.waist {
+    color: 000000;
+    background-color: #dcdcdc;
+}
+
+td.man {
+    color: 000000;
+    background-color: #dcdcdc;
+}
+
+td.man_waist {
+    color: 000000;
+    background-color: #dcdcdc;
+}
+
+td.woman {
+    color: 000000;
+    background-color: #dcdcdc;
+}
+
+td.woman_waist {
+    color: 000000;
+    background-color: #dcdcdc;
 }
